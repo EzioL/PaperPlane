@@ -4,7 +4,8 @@
     "pages/reading/reading",
     "pages/music/music",
     "pages/movie/movie",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/reading-detail/reading-detail"
   ],
   "window":{
     "backgroundTextStyle":"light",

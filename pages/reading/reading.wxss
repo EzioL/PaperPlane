@@ -21,7 +21,7 @@
   line-height: 1.85em;
   font-size: 0.875em;
   text-align: center;
-  padding: 0.7143em 0 1.0714em 0;
+  padding: 0.625em 0 0.625em 0;
 }
 
 .content-list .text-title {

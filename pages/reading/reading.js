@@ -4,18 +4,27 @@ Page({
   },
   onLoad: function (options) {
     // 生命周期函数--监听页面加载
-    console.log('start_reading');
-    requestData(this, mCurrentPage + 1);
+    mCurrentPage = 0;
+    requestData(this, mCurrentPage);
   },
   onPullDownRefresh: function () {
     console.log('--------下拉刷新-------')
     wx.showNavigationBarLoading() //在标题栏中显示加载
-    mCurrentPage = -1;
-    requestData(this, mCurrentPage + 1);
+    items: [];
+    mCurrentPage = 0;
+    requestData(this, mCurrentPage);
   },
   onReachBottom: function () {
     // 页面上拉触底事件的处理函数
-    requestData(this, mCurrentPage + 1);
+
+    requestData(this, mCurrentPage);
+  },
+  onItemClick: function (event) {
+    console.log(event);
+    var targetUrl = "/pages/reading-detail/reading-detail"+"?item_id=" + event.currentTarget.dataset.item_id;
+    wx.navigateTo({
+            url: targetUrl
+        });
   },
 });
 
@@ -29,30 +38,42 @@ var util = require('../../utils/util.js');
 function requestData(that, targetPage) {
 
   wx.request({
-    url: 'http://v3.wufazhuce.com:8000/api/channel/reading/more/0',
+    url: 'http://v3.wufazhuce.com:8000/api/channel/reading/more/' + targetPage,
     data: {},
     method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
     // header: {}, // 设置请求的 header
     success: function (res) {
       // success
-      mCurrentPage = targetPage;
+      var length = res.data.data.length;
+      mCurrentPage = res.data.data[length - 1].id;
       console.log(res.data);
+
+      var data = res.data.data;
       var itemList = [];
-      for (var i = 0; i < res.data.data.length; i++) {
-        console.log();
+      for (var i = 0; i < length; i++) {
+        var tag = '';
+        if (data[i].tag_list == 0) {
+          tag = '阅读'
+        } else {
+          tag = data[i].tag_list[0].title;
+        }
+
         itemList.push({
-          tag: '- 阅读 -',
-          title: res.data.data[i].title,
-          author: '文/' + res.data.data[i].author.user_name,
-          img_url: res.data.data[i].img_url,
-          forward: res.data.data[i].forward,
-          post_date: util.computeTime(res.data.data[i].post_date)
+          item_id:data[i].item_id,
+          tag: '- ' + tag + ' -',
+          title: data[i].title,
+          author: '文/' + data[i].author.user_name,
+          img_url: data[i].img_url,
+          forward: data[i].forward,
+          post_date: util.computeTime(data[i].post_date)
         });
 
       }
       that.setData({
-        items: itemList,
+        items: that.data.items.concat(itemList),
+
       });
+
     },
     fail: function (res) {
       // fail
@@ -60,7 +81,7 @@ function requestData(that, targetPage) {
     },
     complete: function (res) {
       // complete
-      console.log("complete mCurrentPage:"+mCurrentPage);
+      console.log(that.data.items.length);
       if (mCurrentPage == 0) {
         wx.hideNavigationBarLoading() //完成停止加载
         wx.stopPullDownRefresh() //停止下拉刷新
