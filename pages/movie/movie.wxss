@@ -1,0 +1,115 @@
+.content-list-wrapper {
+  background: #f6f6f6;
+  font-size: 1em;
+}
+
+.content-list {
+  /*margin-top: 52px; 44px;*/
+  background: #f6f6f6;
+  overflow: hidden;
+}
+
+.content-list .item-text {
+  background: #fff;
+  margin: 0 0 0.5em 0;
+  box-shadow: 0 0.0625em 0 0 rgba(230, 230, 230, 0.5);
+  padding-bottom: 0.7143em;
+}
+
+.content-list .text-tag {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.85em;
+  font-size: 0.875em;
+  text-align: center;
+  padding: 0.625em 0 0.625em 0;
+}
+
+.content-list .text-title {
+  font-size: 1.375em;
+  line-height: 1.4em;
+  max-height: 2.8em;
+}
+
+.content-list .text-author {
+  font-size: 1em;
+  line-height: 1.875em;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 0.3125em;
+  padding: 0 2.5em 0 0;
+  margin-left: 20px;
+}
+
+.content-list .view-margin {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.content-list .view-margin-right {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: right;
+}
+
+.content-list .text-content-short {
+  font-size: 0.875em;
+  line-height: 1.875em;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 1.8em 0 2.5em 0;
+}
+
+.content-list .text-movie-subtitle {
+  font-size: 0.875em;
+  line-height: 1.857em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.content-list .date {
+  font-size: 0.625em;
+  line-height: 1.4em;
+  padding: 1.8em 0 2.5em 0;
+  color: #808080;
+  margin-left: 20px;
+}
+
+.content-list .text-movie-cover-background {
+  height: 13.75em;
+  width: 100%;
+  padding: 1.8125em 0px;
+  background-image: url(http://image.wufazhuce.com/movie-list-background.png);
+  background-size: 100% 100%;
+}
+
+.content-list .text-cover-img {
+  margin: 0.625em 0.625em;
+  width: auto;
+  height: 12.5em;
+  background-size: cover;
+  background-image: url(http://image.wufazhuce.com/list-paceholder.png);
+  /*background: #808080;*/
+  overflow: hidden;
+  border-radius: 0.25em;
+  box-shadow: 0 0 0.3125em 0.1875em rgba(230, 230, 230, 0.5);
+}
+
+.content-list .text-cover-img .img {
+  width: 100%;
+  background: firebrick;
+}
+
+/*.content-list .text-cover-img image {
+    position: relative;
+    margin: 0 !important;
+}*/
+
+/*.content-list .text-movie-cover-background .text-cover-img {
+    border-radius: 0.25em;
+    box-shadow: 0 0 0.3125em 0.1875em rgba(230, 230, 230, 0.5);
+}*/
+
+/*.content-list .img_center_x {
+    height: 100%;
+    width: auto;
+    max-width: none;
+    left: 50%;
+ 
+}*/

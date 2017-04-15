@@ -1,46 +1,49 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/reading/reading",
     "pages/music/music",
     "pages/movie/movie",
     "pages/logs/logs",
+    "pages/movie-detail/movie-detail",
     "pages/reading-detail/reading-detail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "纸飞机",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle": "black",
     "enablePullDownRefresh": "true"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "iconPath":"images/home.png",
-      "selectedIconPath":"images/home_active.png",  
-      "text": "首页"  
-    },
-    {
-      "pagePath": "pages/reading/reading",
-      "iconPath":"images/reading.png",
-      "selectedIconPath":"images/reading_active.png",
-      "text": "阅读"  
-    },
-    {
-      "pagePath": "pages/music/music",
-      "iconPath":"images/music.png",
-      "selectedIconPath":"images/music_active.png",
-      "text": "音乐"  
-    },
-    {
-      "pagePath": "pages/movie/movie",
-      "iconPath":"images/movie.png",
-      "selectedIconPath":"images/movie_active.png",
-      "text": "影视"  
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/reading/reading",
+        "iconPath": "images/reading.png",
+        "selectedIconPath": "images/reading_active.png",
+        "text": "阅读"
+      },
+      {
+        "pagePath": "pages/music/music",
+        "iconPath": "images/music.png",
+        "selectedIconPath": "images/music_active.png",
+        "text": "音乐"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "iconPath": "images/movie.png",
+        "selectedIconPath": "images/movie_active.png",
+        "text": "影视"
+      }
+    ]
   },
- "networkTimeout": {
+  "networkTimeout": {
     "request": 10000,
     "connectSocket": 10000,
     "uploadFile": 10000,

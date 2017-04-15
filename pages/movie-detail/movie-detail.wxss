@@ -1,0 +1,19 @@
+/*文章详情
+*/
+
+.text-detail {
+  margin-bottom: 20px;
+}
+
+.text-detail .img {
+  background-size: cover;
+  height: 210px;
+  width: 100%;
+  margin-bottom: 17px;
+   margin-top: 5px;
+  /*margin-top: 45px;*/
+}
+
+/*<div style="background-size:cover;background-image:url(http://image.wufazhuce.com/FqU0vceLR8tyXOLu373QWZNGOIGL);height:210px;margin-bottom:17px;margin-top: 45px;">
+        &nbsp;
+    </div>*/

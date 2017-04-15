@@ -1,6 +1,7 @@
 Page({
   data: {
-    items: []
+    items: [],
+    hidden: false
   },
   onLoad: function (options) {
     // 生命周期函数--监听页面加载
@@ -21,10 +22,10 @@ Page({
   },
   onItemClick: function (event) {
     console.log(event);
-    var targetUrl = "/pages/reading-detail/reading-detail"+"?item_id=" + event.currentTarget.dataset.item_id;
+    var targetUrl = "/pages/reading-detail/reading-detail" + "?itemId=" + event.currentTarget.dataset.itemId;
     wx.navigateTo({
-            url: targetUrl
-        });
+      url: targetUrl
+    });
   },
 });
 
@@ -59,7 +60,7 @@ function requestData(that, targetPage) {
         }
 
         itemList.push({
-          item_id:data[i].item_id,
+          item_id: data[i].item_id,
           tag: '- ' + tag + ' -',
           title: data[i].title,
           author: '文/' + data[i].author.user_name,
@@ -71,7 +72,7 @@ function requestData(that, targetPage) {
       }
       that.setData({
         items: that.data.items.concat(itemList),
-
+        hidden: true
       });
 
     },

@@ -1,4 +1,7 @@
 <scroll-view>
+  <loading hidden="{{hidden}}">
+        数据加载中
+    </loading>
   <view class="content-list-wrapper" style="font-size: 1.09867em;">
     <view class="content-list">
       <view class="item-text" wx:for="{{items}}">

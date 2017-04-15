@@ -1,0 +1,39 @@
+<scroll-view>
+  <loading hidden="{{hidden}}">
+    数据加载中
+  </loading>
+  <view class="content-list-wrapper" style="font-size: 1.09867em;">
+    <view class="content-list">
+      <view class="item-text" wx:for="{{items}}">
+        <view data-item="{{item}}" bindtap="onItemClick">
+          <view class="text-tag">
+            <text>{{item.tag}}</text>
+          </view>
+          <view class="view-margin">
+            <text class="text-title">{{item.title}}</text>
+          </view>
+          <view>
+            <text class="text-author">{{item.author}}</text>
+          </view>
+
+          <view class="text-movie-cover-background">
+            <view class="text-cover-img">
+              <image class="img" src="{{item.img_url}}" />
+            
+            </view>
+          </view>
+
+          <view class="view-margin">
+            <text class="text-content-short">{{item.forward}}</text>
+          </view>
+          <view class="view-margin-right">
+            <text class="text-movie-subtitle">{{item.subtitle}}</text>
+          </view>
+          <view>
+            <text class="date">{{item.post_date}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
