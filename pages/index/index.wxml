@@ -1,10 +1,32 @@
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+<scroll-view>
+  <loading hidden="{{hidden}}">
+    数据加载中
+  </loading>
+  <view class="content-list-wrapper" style="font-size: 1.09867em;">
+    <view class="content-list">
+      <view class="item-text" wx:for="{{items}}" wx:for-item="data">
+        <view class="text-tag">
+        </view>
+        <view class="item-text" wx:for="{{data.content_list}}" wx:for-item="item">
+          <view bindtap="onItemClick">
+            <block wx:if="{{item.category == 0}}"> 0 </block>
+            <block wx:if="{{item.category == 1}}"> 1 </block>
+            <block wx:if="{{item.category == 2}}"> 2 </block>
+            <block wx:if="{{item.category == 3}}">
+
+            </block>
+            <block wx:if="{{item.category == 4}}">4</block>
+            <block wx:if="{{item.category == 5}}">
+              <import src="template/template_movie.wxml" />
+              <template is="template_movie" data="{{item}}" />
+            </block>
+
+          </view>
+        </view>
+      </view>
+
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+</scroll-view>

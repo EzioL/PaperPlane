@@ -1,0 +1,29 @@
+<template name="template_movie">
+<text class="text-title">{{item.title}}</text>
+    <view class="text-tag">
+      <text>- 影视 -</text>
+    </view>
+    <view class="view-margin">
+      <text class="text-title">{{item.title}}</text>
+    </view>
+    <view>
+        <text class="text-author">文/{{item.author.user_name}}</text>
+    </view>
+    <view class="text-movie-cover-background">
+            <view class="text-movie-cover-img">
+              <image class="img" src="{{item.img_url}}" />
+            </view>
+    </view>
+
+     <view class="view-margin">
+         <text class="text-content-short">{{item.forward}}</text>
+     </view>
+    <view class="view-margin-right">
+      <text class="text-movie-subtitle">---《{{item.subtitle}}》</text>
+    </view>
+    <view>
+      <text class="date">{{item.post_date}}</text>
+    </view>
+
+   
+</template>>
