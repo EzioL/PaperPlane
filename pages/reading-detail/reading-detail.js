@@ -21,7 +21,7 @@ function requestData(that, id) {
             // success
             var article = res.data.data.hp_content;
           console.log( article);
-            WxParse.wxParse('article', 'html', article, that, 5);
+            //WxParse.wxParse('article', 'html', article, that, 5);
         },
         fail: function (res) {
             // fail

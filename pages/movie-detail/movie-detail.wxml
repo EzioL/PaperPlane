@@ -3,6 +3,10 @@
     数据加载中
   </loading>
   <scroll-view class="text-detail">
+  <view class="movie-video">
+    <video class="video" src="http://music.wufazhuce.com/lsWsGvfMCqjvYX-g7TVyr-5ax1jO" controls></video>
+  </view>
+    
     <view>
       <image class="img" src="{{detail.detailcover}}"></image>
     </view>

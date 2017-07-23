@@ -85,7 +85,6 @@
   height: 12.5em;
   background-size: cover;
   background-image: url(http://image.wufazhuce.com/list-paceholder.png);
-  /*background: #808080;*/
   overflow: hidden;
   border-radius: 0.25em;
   box-shadow: 0 0 0.3125em 0.1875em rgba(230, 230, 230, 0.5);
@@ -93,23 +92,5 @@
 
 .content-list .text-cover-img .img {
   width: 100%;
-  background: firebrick;
 }
 
-/*.content-list .text-cover-img image {
-    position: relative;
-    margin: 0 !important;
-}*/
-
-/*.content-list .text-movie-cover-background .text-cover-img {
-    border-radius: 0.25em;
-    box-shadow: 0 0 0.3125em 0.1875em rgba(230, 230, 230, 0.5);
-}*/
-
-/*.content-list .img_center_x {
-    height: 100%;
-    width: auto;
-    max-width: none;
-    left: 50%;
- 
-}*/

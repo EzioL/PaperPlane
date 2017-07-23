@@ -5,8 +5,8 @@ Page({
     },
     onLoad: function (options) {
         // 生命周期函数--监听页面加载
-        item = JSON.parse(options.item);
-        requestData(this, item.item_id);
+        console.log(options.item);
+        requestData(this, options.itemId);
     },
     onReady: function () {
         // 生命周期函数--监听页面初次渲染完成
@@ -44,6 +44,7 @@ Page({
 let item;
 
 function requestData(that, id) {
+    
     wx.request({
         url: 'http://v3.wufazhuce.com:8000/api/movie/detail/' + id,
         data: {},

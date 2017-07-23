@@ -1,5 +1,13 @@
 /*文章详情
 */
+.movie-video {
+  width: 100%;
+}
+
+.video {
+  width: 100%;
+  height: 210px;
+}
 
 .text-detail {
   margin-bottom: 20px;

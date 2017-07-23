@@ -1,63 +1,146 @@
-.home-view1 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  margin: 6px;
+.content-list-wrapper {
+  background: #f6f6f6;
+  font-size: 1em;
 }
 
-.home-view3 {
-  display: flex;
-  justify-content: space-between;
+.content-list {
+  /*margin-top: 52px; 44px;*/
+  background: #f6f6f6;
+  overflow: hidden;
 }
 
-.home-view4 {
-  display: flex;
-  align-items: center;
+.content-list .item-text {
+  background: #fff;
+  margin: 0 0 0.5em 0;
+  box-shadow: 0 0.0625em 0 0 rgba(230, 230, 230, 0.5);
+  padding-bottom: 0.7143em;
 }
 
-.home-image1 {
-  height: 200px;
-}
-
-.home-image-heart {
-  width: 30px;
-  height: 30px;
-}
-
-.home-text1 {
-  text-align: left;
-  line-height: 25px;
-  margin-top: 6px;
-  margin-right: 6px;
-  color: gray;
-}
-
-.home-text-heart {
-  width: 22px;
-  height: 22px;
-  margin-left: 10px;
-  border-radius: 20%;
-  pad: 5px;
+.content-list .text-tag {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.85em;
+  font-size: 0.875em;
   text-align: center;
+  padding: 0.625em 0 0.625em 0;
 }
 
-.home-text-time {
-  text-align: center;
+.content-list .text-title {
+  font-size: 1.375em;
+  line-height: 1.4em;
+  max-height: 2.8em;
+}
+
+.content-list .text-author {
+  font-size: 1em;
+  line-height: 1.875em;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 0.3125em;
+  padding: 0 2.5em 0 0;
+  margin-left: 20px;
+}
+
+.content-list .view-margin {
+  margin-left: 20px;
   margin-right: 20px;
-  padding-top: 5px;
-  color: gray;
 }
 
-.home-view-line {
-  width: 100%;
-  height: 6px;
-  margin-top: 5px;
-  background-color: gainsboro;
+.content-list .view-margin-right {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: right;
 }
 
-.bgColor {
-  background-color: lightblue;
-  opacity: 0.6;
+.content-list .text-content-short {
+  font-size: 0.875em;
+  line-height: 1.875em;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 1.8em 0 2.5em 0;
+}
+
+.content-list .text-movie-subtitle {
+  font-size: 0.875em;
+  line-height: 1.857em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.content-list .date {
+  font-size: 0.625em;
+  line-height: 1.4em;
+  padding: 1.8em 0 2.5em 0;
+  color: #808080;
+  margin-left: 20px;
+}
+
+.content-list .text-music-cover {
+  position: relative;
+  clear: both;
+  height: 15.125em;
+  margin: 0.625em 0;
+  background: url(http://image.wufazhuce.com/music-list-right.png) no-repeat center right;
+  background-size: auto 100%;
+}
+
+.content-list .text-music-cover-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18.6875em;
+  height: 15.125em;
+  border-radius: 0 9.9em 10em 0;
+  box-shadow: 0 0 0.625em 0.125em rgba(230, 230, 230, 0.5);
+}
+
+.content-list .text-music-cover-img {
+  position: absolute;
+  /*left: 4.0625em;*/
+  left: 3.0625em;
+  top: 0.5em;
+  width: 14.125em;
+  height: 14.125em;
+  border-radius: 9.6em 9.6875em 9.6875em 9.6875em;
+  background-size: cover;
+  background-image: url(http://image.wufazhuce.com/music-list-paceholder.png);
+  overflow: hidden;
+}
+
+.content-list .text-music-cover-img .img {
+  /*position: relative;
+    margin: 0 !important;*/
+     /* top: 0.5em;*/
+     background: #fff;
+      top: 0.5em;
+  width: 14.125em;
+  height: 14.125em;
+  border-radius: 9.6em 9.6875em 9.6875em 9.6875em;
+  border-radius: 9.6em 9.6875em 9.6875em 9.6875em;
+}
+
+.content-list .platform-icon {
+  position: absolute;
+  left: 20px;
+  bottom: 0.5em;
+/*  width: 1.5em;
+  height: 1.5em;*/
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0;
+}
+
+.content-list .music-play {
+  position: absolute;
+ /* left: 9.75em;
+  top: 6.1875em;*/
+   left: 7.8em;
+  top: 5.5em;
+  width: 2.75em;
+  height: 2.75em;
+}
+
+.play-btn {
+  width: 36px;
+  height: 36px;
+  margin: 24px 24px;
+  /*background: url(http://image.wufazhuce.com/m.wufazhuce.com-play_btn.png) no-repeat center center;*/
+  background-size: cover;
+  border: none;
 }

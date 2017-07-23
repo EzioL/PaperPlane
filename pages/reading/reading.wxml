@@ -16,7 +16,7 @@
             <text class="text-author">{{item.author}}</text>
           </view>
           <view class="text-cover-img">
-            <image mode="aspectFit" src="{{item.img_url}}" />
+            <image class="img"  src="{{item.img_url}}" />
           </view>
           <view class="view-margin">
             <text class="text-content-short">{{item.forward}}</text>

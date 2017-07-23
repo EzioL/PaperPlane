@@ -5,7 +5,6 @@ Page({
   },
   onLoad: function (options) {
     // 生命周期函数--监听页面加载
-    // 生命周期函数--监听页面加载
     mCurrentPage = 0;
     requestData(this, mCurrentPage);
   },
@@ -23,6 +22,7 @@ Page({
   },
   onPullDownRefresh: function () {
     // 页面相关事件处理函数--监听用户下拉动作
+    
   },
   onReachBottom: function () {
     // 页面上拉触底事件的处理函数
@@ -39,7 +39,7 @@ Page({
   onItemClick: function (event) {
     console.log(event);
     var targetUrl = "/pages/movie-detail/movie-detail" + 
-    "?item=" + JSON.stringify(event.currentTarget.dataset.item);
+    "?itemId=" + event.currentTarget.dataset.itemId;
     wx.navigateTo({
       url: targetUrl
     });
@@ -48,6 +48,7 @@ Page({
 })
 var mCurrentPage = -1;
 var util = require('../../utils/util.js');
+var api = require('../../utils/api.js');
 /**
  * 请求数据
  * @param that Page的对象，用其进行数据的更新
@@ -56,6 +57,7 @@ var util = require('../../utils/util.js');
 function requestData(that, targetPage) {
   wx.request({
     url: 'http://v3.wufazhuce.com:8000/api/channel/movie/more/' + targetPage,
+    //url:api.MOVIE_MORE+targetPage+api.CONFIG,
     data: {},
     method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
     // header: {}, // 设置请求的 header

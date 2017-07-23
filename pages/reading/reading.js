@@ -31,6 +31,7 @@ Page({
 
 var mCurrentPage = -1;
 var util = require('../../utils/util.js');
+var api = require('../../utils/api.js');
 /**
  * 请求数据
  * @param that Page的对象，用其进行数据的更新
@@ -40,6 +41,7 @@ function requestData(that, targetPage) {
 
   wx.request({
     url: 'http://v3.wufazhuce.com:8000/api/channel/reading/more/' + targetPage,
+   //url:api.READING_MORE+targetPage+api.CONFIG,
     data: {},
     method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
     // header: {}, // 设置请求的 header
