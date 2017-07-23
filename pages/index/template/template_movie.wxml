@@ -1,4 +1,5 @@
 <template name="template_movie">
+<text class="text-title">{{item.title}}</text>
     <view class="text-tag">
       <text>- 影视 -</text>
     </view>

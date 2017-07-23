@@ -19,7 +19,6 @@
           <view class="text-movie-cover-background">
             <view class="text-cover-img">
               <image class="img" src="{{item.img_url}}" />
-            
             </view>
           </view>
 
