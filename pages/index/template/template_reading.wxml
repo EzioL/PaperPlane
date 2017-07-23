@@ -1,0 +1,24 @@
+<template name="template_reading">
+  <view class="text-tag">
+    <text>- 阅读 -</text>
+  </view>
+  <view class="view-margin">
+    <text class="text-title">{{item.title}}</text>
+  </view>
+  <view>
+    <text class="text-author">文/{{item.author.user_name}}</text>
+  </view>
+  <view class="text-reading-cover-img">
+    <image class="img" src="{{item.img_url}}" />
+  </view>
+
+  <view class="view-margin">
+    <text class="text-content-short">{{item.forward}}</text>
+  </view>
+  <view class="view-margin-right">
+    <text class="text-movie-subtitle">---《{{item.subtitle}}》</text>
+  </view>
+  <view>
+    <text class="date">{{item.post_date}}</text>
+  </view>
+</template>>

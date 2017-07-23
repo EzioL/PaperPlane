@@ -1,0 +1,16 @@
+<template name="template_index">
+  <view class="text-cover-img">
+    <image class="img" src="{{item.img_url}}" />
+  </view>
+  <view class="text-tag">
+    <text>{{item.title}}|{{item.pic_info}}</text>
+  </view>
+
+  <view class="view-margin">
+    <text class="text-content-short">{{item.forward}}</text>
+  </view>
+
+  <view class="text-tag">
+    <text>{{item.words_info}}</text>
+  </view>
+</template>>

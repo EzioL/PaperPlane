@@ -16,7 +16,7 @@
             <text class="text-author">{{item.author}}</text>
           </view>
           <view class="text-music-cover">
-            <view class="text-movie-cover-background">
+            <view class="text-music-cover-background">
             </view>
             <view class="text-music-cover-img">
               <image class="img" src="{{item.img_url}}" />

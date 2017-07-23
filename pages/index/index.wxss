@@ -39,6 +39,22 @@
   padding: 0 2.5em 0 0;
   margin-left: 20px;
 }
+.content-list .text-cover-img {
+
+  width: auto;
+  height: 12.5em;
+  background-size: cover;
+  background-image: url(http://image.wufazhuce.com/list-paceholder.png);
+  overflow: hidden;
+}
+.content-list .text-cover-img .img {
+  width: 100%;
+  background: firebrick;
+}
+
+
+
+
 .content-list .text-movie-cover-img {
   margin: 0.625em 0.625em;
   width: auto;
@@ -85,4 +101,97 @@
   padding: 1.8em 0 2.5em 0;
   color: #808080;
   margin-left: 20px;
+}
+
+
+/*音乐css*/
+.content-list .text-music-cover {
+  position: relative;
+  clear: both;
+  height: 15.125em;
+  margin: 0.625em 0;
+  background: url(http://image.wufazhuce.com/music-list-right.png) no-repeat center right;
+  background-size: auto 100%;
+}
+
+.content-list .text-music-cover-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18.6875em;
+  height: 15.125em;
+  border-radius: 0 9.9em 10em 0;
+  box-shadow: 0 0 0.625em 0.125em rgba(230, 230, 230, 0.5);
+}
+
+.content-list .text-music-cover-img {
+  position: absolute;
+  /*left: 4.0625em;*/
+  left: 3.0625em;
+  top: 0.5em;
+  width: 14.125em;
+  height: 14.125em;
+  border-radius: 9.6em 9.6875em 9.6875em 9.6875em;
+  background-size: cover;
+  background-image: url(http://image.wufazhuce.com/music-list-paceholder.png);
+  overflow: hidden;
+}
+
+.content-list .text-music-cover-img .img {
+  /*position: relative;
+    margin: 0 !important;*/
+     /* top: 0.5em;*/
+     background: #fff;
+      top: 0.5em;
+  width: 14.125em;
+  height: 14.125em;
+  border-radius: 9.6em 9.6875em 9.6875em 9.6875em;
+  border-radius: 9.6em 9.6875em 9.6875em 9.6875em;
+}
+
+.content-list .platform-icon {
+  position: absolute;
+  left: 20px;
+  bottom: 0.5em;
+/*  width: 1.5em;
+  height: 1.5em;*/
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0;
+}
+.content-list .music-play {
+  position: absolute;
+ /* left: 9.75em;
+  top: 6.1875em;*/
+   left: 7.8em;
+  top: 5.5em;
+  width: 2.75em;
+  height: 2.75em;
+}
+
+.play-btn {
+  width: 36px;
+  height: 36px;
+  margin: 24px 24px;
+  /*background: url(http://image.wufazhuce.com/m.wufazhuce.com-play_btn.png) no-repeat center center;*/
+  background-size: cover;
+  border: none;
+}
+
+/*reading css*/
+
+
+.content-list .text-reading-cover-img {
+  margin: 0.625em 0.625em;
+  width: auto;
+  height: 12.5em;
+  background-size: cover;
+  background-image: url(http://image.wufazhuce.com/list-paceholder.png);
+  overflow: hidden;
+  border-radius: 0.25em;
+  box-shadow: 0 0 0.3125em 0.1875em rgba(230, 230, 230, 0.5);
+}
+
+.content-list .text-reading-cover-img .img {
+  width: 100%;
 }

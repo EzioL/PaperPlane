@@ -20,7 +20,7 @@ Page({
 
     requestData(this, mCurrentPage);
   },
-  onItemClick: function (event) {
+  onReadItemClick: function (event) {
     console.log(event);
     var targetUrl = "/pages/reading-detail/reading-detail" + "?itemId=" + event.currentTarget.dataset.itemId;
     wx.navigateTo({
@@ -41,7 +41,7 @@ function requestData(that, targetPage) {
 
   wx.request({
     url: 'http://v3.wufazhuce.com:8000/api/channel/reading/more/' + targetPage,
-   //url:api.READING_MORE+targetPage+api.CONFIG,
+    //url:api.READING_MORE+targetPage+api.CONFIG,
     data: {},
     method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
     // header: {}, // 设置请求的 header

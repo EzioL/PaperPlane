@@ -11,13 +11,28 @@
         </view>
         <view class="item-text" wx:for="{{data.content_list}}" wx:for-item="item">
           <view bindtap="onItemClick">
-            <block wx:if="{{item.category == 0}}"> 0 </block>
-            <block wx:if="{{item.category == 1}}"> 1 </block>
-            <block wx:if="{{item.category == 2}}"> 2 </block>
-            <block wx:if="{{item.category == 3}}">
-
+            <block wx:if="{{item.category == 0}}">
+              {{data.weather.date}}
+              <import src="template/template_index.wxml" />
+              <template is="template_index" data="{{item}}" />
             </block>
-            <block wx:if="{{item.category == 4}}">4</block>
+            <block wx:if="{{item.category == 1}}">
+
+              <import src="template/template_reading.wxml" />
+              <template is="template_reading" data="{{item}}" />
+            </block>
+            <block wx:if="{{item.category == 2}}">
+              <import src="template/template_reading.wxml" />
+              <template is="template_reading" data="{{item}}" />
+            </block>
+            <block wx:if="{{item.category == 3}}">
+              <import src="template/template_reading.wxml" />
+              <template is="template_reading" data="{{item}}" />
+            </block>
+            <block wx:if="{{item.category == 4}}">
+              <import src="template/template_music.wxml" />
+              <template is="template_music" data="{{item}}" />
+            </block>
             <block wx:if="{{item.category == 5}}">
               <import src="template/template_movie.wxml" />
               <template is="template_movie" data="{{item}}" />

@@ -1,13 +1,4 @@
-/*文章详情
-*/
-.movie-video {
-  width: 100%;
-}
-
-.video {
-  width: 100%;
-  height: 210px;
-}
+/*文章详情*/
 
 .text-detail {
   margin-bottom: 20px;
@@ -15,13 +6,10 @@
 
 .text-detail .img {
   background-size: cover;
-  height: 210px;
+  height: 100%;
   width: 100%;
-  margin-bottom: 17px;
-   margin-top: 5px;
-  /*margin-top: 45px;*/
 }
-
-/*<div style="background-size:cover;background-image:url(http://image.wufazhuce.com/FqU0vceLR8tyXOLu373QWZNGOIGL);height:210px;margin-bottom:17px;margin-top: 45px;">
-        &nbsp;
-    </div>*/
+.swiper {
+  height: 220px;
+  width: 100%;
+}

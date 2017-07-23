@@ -36,8 +36,8 @@ Page({
       path: 'path' // 分享路径
     }
   },
-  onItemClick: function (event) {
-    console.log(event);
+  onMovieItemClick: function (event) {
+    console.log(123);
     var targetUrl = "/pages/movie-detail/movie-detail" + 
     "?itemId=" + event.currentTarget.dataset.itemId;
     wx.navigateTo({

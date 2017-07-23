@@ -1,0 +1,33 @@
+<template name="template_music">
+  <view class="text-tag">
+     <text>- 音乐 -</text>
+  </view>
+  <view class="view-margin">
+    <text class="text-title">{{item.title}}</text>
+  </view>
+  <view>
+    <text class="text-author">文/{{item.author.user_name}}</text>
+  </view>
+
+  <view class="text-music-cover">
+    <view class="text-music-cover-background">
+    </view>
+    <view class="text-music-cover-img">
+      <image class="img" src="{{item.img_url}}" />
+    </view>
+    <view class="music-play">
+      <image class="play-btn" src="http://image.wufazhuce.com/play_btn_empty.png" />
+    </view>
+    <image class="platform-icon" src="http://image.wufazhuce.com/music_copyright_1.png" />
+  </view>
+
+  <view class="view-margin">
+    <text class="text-content-short">{{item.forward}}</text>
+  </view>
+  <view class="view-margin-right">
+    <text class="text-movie-subtitle">---《{{item.subtitle}}》</text>
+  </view>
+  <view>
+    <text class="date">{{item.post_date}}</text>
+  </view>
+</template>>

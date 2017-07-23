@@ -3,12 +3,15 @@
     数据加载中
   </loading>
   <scroll-view class="text-detail">
-  <view class="movie-video">
-    <video class="video" src="http://music.wufazhuce.com/lsWsGvfMCqjvYX-g7TVyr-5ax1jO" controls></video>
-  </view>
-    
-    <view>
-      <image class="img" src="{{detail.detailcover}}"></image>
-    </view>
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="img" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <import src="../../wxParse/wxParse.wxml" /> 
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+
   </scroll-view>
 </scroll-view>
