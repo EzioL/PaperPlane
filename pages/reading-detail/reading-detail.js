@@ -1,10 +1,24 @@
 Page({
     data: {
-    },
+    nodes: [{
+      name: 'div',
+      attrs: {
+        class: 'div_class',
+        style: 'line-height: 60px; color: red;'
+      },
+      children: [{
+        type: 'text',
+        text: 'Hello&nbsp;World!'
+      }]
+    }]
+  },
+  tap() {
+    console.log('tap')
+  },
     onLoad: function (options) {
         // 生命周期函数--监听页面加载
-        console.log(阅读详情);
-        requestData(this, options.itemId);
+        console.log("阅读详情");
+       // requestData(this, options.itemId);
         
     },
 })

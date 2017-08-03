@@ -64,7 +64,7 @@ function requestData(that, id) {
       console.log(data);
       that.setData({
         hidden: true,
-        imgUrls: p
+        imgUrls: [data.detailcover]
 
       });
     },
@@ -86,7 +86,7 @@ function requestData(that, id) {
       // success
 
       var data = res.data.data.data[0];
-      WxParse.wxParse('article', 'html', data.content, that, 0);
+      WxParse.wxParse('article', 'html', data.content, that, 10);
       console.log(data.content);
       that.setData({
         hidden: true,

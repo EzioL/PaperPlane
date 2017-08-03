@@ -11,11 +11,17 @@
  */
 
 .wxParse{
-    margin: 0 5px;
-    font-family: Helvetica,sans-serif;
-    font-size: 28rpx;
-    color: #666;
-    line-height: 1.8;
+    margin: 0 20px;
+    //font-family: Helvetica,sans-serif;
+    //font-size: 28rpx;
+    //color: #666;
+    //line-height: 1.8;
+    font-size:16px;
+    color: #333;
+    line-height:32px;
+    margin:0px;
+    padding:0px;
+    font-family: "PingFangSC-Light",sans-serif;
 }
 view{
     word-break:break-all; overflow:auto;
@@ -94,7 +100,7 @@ view{
 }
 
 .wxParse-img{
-    background-color: #efefef;
+    margin-top: 10px;
     overflow: hidden;
     text-align:center;
 }
@@ -173,6 +179,7 @@ view{
 }
 .WxEmojiView{
     align-items: center;
+    margin: 0 20px 20px 20px;
 }
 .wxEmoji{
     width: 16px;
@@ -198,5 +205,19 @@ view{
 .wxParse-th{
 	background:#f0f0f0;
 	border-top:1px solid #e0e0e0;
+}
+.one-image-note {
+    font-size: 12px;
+    color: #808080;
+    margin-top:-8px;
+    margin-bottom: 10px;
+    text-align:center;
+}
+.text-content-p {
+    margin: 0 0 20px 0;
+    padding:0 10px;
+    font-size:20px;
+    color: #333;
+
 }
 

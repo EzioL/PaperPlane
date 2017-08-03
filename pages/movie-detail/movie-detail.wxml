@@ -10,8 +10,23 @@
         </swiper-item>
       </block>
     </swiper>
-    <import src="../../wxParse/wxParse.wxml" /> 
+    <view class="text-title">
+        <text class="text-title">{{detail.title}}</text>
+    </view>
+    <view class="text-simple-author">
+        <text class="text-simple-author">文/{{detail.user.user_name}}</text>
+    </view>
+     <view class="content">
+      <import src="../../wxParse/wxParse.wxml" /> 
     <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+     </view>
+   
+     <view class="text-editor">
+        <text class="text-editor">文/{{detail.charge_edt}}</text>
+    </view>
+      <view class="text-editor">
+        <text class="text-editor">文/{{detail.copyright}}</text>
+    </view>
 
   </scroll-view>
 </scroll-view>
