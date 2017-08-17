@@ -21,7 +21,7 @@ Page({
     requestData(this, mCurrentPage);
   },
   onReadItemClick: function (event) {
-    console.log(event);
+    console.log("reading点击事件");
     var targetUrl = "/pages/reading-detail/reading-detail" + "?itemId=" + event.currentTarget.dataset.itemId;
     wx.navigateTo({
       url: targetUrl

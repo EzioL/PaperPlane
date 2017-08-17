@@ -1,2 +1,4 @@
-
-<rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+  <view class="content">
+      <import src="../../wxParse/wxParse.wxml" /> 
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+   </view>

@@ -85,8 +85,13 @@ function requestData(that, targetId) {
     // header: {}, // 设置请求的 header
     success: function (res) {
       // success
-      console.log(res);
+    
       var data = res.data.data;
+      for (var i = 1; i <  data.content_list.length; i++) {
+          data.content_list[i].menu = data.menu.list[i];
+      }
+      //console.log("data.content_list");
+      //console.log(data.content_list[1].menu);
       that.setData({
         items: that.data.items.concat(data),
         hidden: true
