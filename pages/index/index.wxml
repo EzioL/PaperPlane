@@ -10,14 +10,13 @@
         <view class="text-tag">
         </view>
         <view class="item-text" wx:for="{{data.content_list}}" wx:for-item="item">
-          <view bindtap="onItemClick">
+          <view data-item="{{item}}" bindtap="onItemClick">
             <block wx:if="{{item.category == 0}}">
               {{data.weather.date}}
               <import src="template/template_index.wxml" />
               <template is="template_index" data="{{item}}" />
             </block>
             <block wx:if="{{item.category == 1}}">
-
               <import src="template/template_reading.wxml" />
               <template is="template_reading" data="{{item}}" />
             </block>

@@ -5,6 +5,7 @@
     "pages/music/music",
     "pages/movie/movie",
     "pages/logs/logs",
+    "pages/music-detail/music-detail",
     "pages/movie-detail/movie-detail",
     "pages/reading-detail/reading-detail"
   ],

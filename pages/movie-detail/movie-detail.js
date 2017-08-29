@@ -10,6 +10,7 @@ Page({
   },
   onLoad: function (options) {
     // 生命周期函数--监听页面加载
+    id = options.itemId;
     requestData(this, options.itemId);
 
 
@@ -41,13 +42,14 @@ Page({
   onShareAppMessage: function () {
     // 用户点击右上角分享
     return {
-      title: 'title', // 分享标题
+      title: '电影故事', // 分享标题
       desc: 'desc', // 分享描述
-      path: 'path' // 分享路径
+      path: 'pages/movie-detail/movie-detail?itemId='+id // 分享路径
     }
   }
 })
 let item;
+var id;
 var WxParse = require('../../wxParse/wxParse.js');
 function requestData(that, id) {
   wx.request({

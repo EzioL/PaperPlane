@@ -15,14 +15,13 @@ Page({
      // 页面上拉触底事件的处理函数
      requestData(this, mCurrentPage);
   },
-  onShareAppMessage: function() {
-    // 用户点击右上角分享
-    return {
-      title: 'title', // 分享标题
-      desc: 'desc', // 分享描述
-      path: 'path' // 分享路径
-    }
-  }
+  onMusicItemClick: function (event) {
+    var targetUrl = "/pages/music-detail/music-detail" + "?itemId=" + event.currentTarget.dataset.itemId;
+    console.log("music点击事件----?"+targetUrl);
+   wx.navigateTo({
+      url: targetUrl
+    });
+  },
 })
 
 var mCurrentPage = -1;

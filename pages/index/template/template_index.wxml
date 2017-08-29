@@ -9,7 +9,6 @@
   <view class="view-margin">
     <text class="text-content-short">{{item.forward}}</text>
   </view>
-
   <view class="text-tag">
     <text>{{item.words_info}}</text>
   </view>

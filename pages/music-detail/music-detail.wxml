@@ -1,0 +1,4 @@
+  <view class="content">
+      <import src="../../wxParse/wxParse.wxml" /> 
+    <template is="wxParse" data="{{wxParseData:story.nodes}}" />
+   </view>

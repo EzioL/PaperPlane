@@ -2,7 +2,7 @@
   <loading hidden="{{hidden}}">
     数据加载中
   </loading>
-  <scroll-view class="text-detail">
+  <scroll-view class="text-detail" hidden="{{!hidden}}">
     <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{imgUrls}}">
         <swiper-item>

@@ -26,18 +26,31 @@ Page({
     // 页面上拉触底事件的处理函数
     requestData(this, idlist[current]);
   },
-  onShareAppMessage: function () {
+ /* onShareAppMessage: function () {
     // 用户点击右上角分享
     return {
       title: 'title', // 分享标题
       desc: 'desc', // 分享描述
       path: 'path' // 分享路径
     }
-  },
+  },*/
+
   onItemClick: function (event) {
-    console.log(event);
-    var targetUrl = "/pages/movie-detail/movie-detail" +
-      "?item=" + JSON.stringify(event.currentTarget.dataset.item);
+    var targetUrl = '';
+    var item = event.currentTarget.dataset.item;
+    console.log(event.currentTarget.dataset.item);
+    if (item.category != 0) {
+      if (item.category == 4) {
+        targetUrl = "/pages/music-detail/music-detail" + "?itemId=" + item.item_id;
+      }else if (item.category == 5) {
+        targetUrl = "/pages/movie-detail/movie-detail" + "?itemId=" + item.item_id;
+      }else{
+        targetUrl = "/pages/reading-detail/reading-detail" + "?itemId=" + item.item_id;
+      }
+    }else{
+      return ;
+    }
+    
     wx.navigateTo({
       url: targetUrl
     });
@@ -50,7 +63,7 @@ var util = require('../../utils/util.js');
 
 function getIdlist(that) {
   wx.request({
-    url: 'http://v3.wufazhuce.com:8000/api/onelist/idlist/?channel=wdj&version=4.0.2&uuid=ffffffff-a90e-706a-63f7-ccf973aae5ee&platform=android 或 http://v3.wufazhuce.com:8000/api/onelist/idlist/?channel=wdj&version=4.0.2&uuid=ffffffff-a90e-706a-63f7-ccf973aae5ee&platform=android',
+    url: 'http://v3.wufazhuce.com:8000/api/onelist/idlist/?channel=wdj&version=4.0.2&uuid=ffffffff-a90e-706a-63f7-ccf973aae5ee&platform=android',
     data: {},
     method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
     // header: {}, // 设置请求的 header
@@ -77,6 +90,8 @@ function getIdlist(that) {
  * @param that Page的对象，用其进行数据的更新
  * @param targetPage 请求的目标页码
  */
+ var util = require('../../utils/util.js');
+ 
 function requestData(that, targetId) {
   wx.request({
     url: 'http://v3.wufazhuce.com:8000/api/onelist/' + targetId + '/0?cchannel=wdj&version=4.0.2&uuid=ffffffff-a90e-706a-63f7-ccf973aae5ee&platform=android',
@@ -88,10 +103,12 @@ function requestData(that, targetId) {
     
       var data = res.data.data;
       for (var i = 1; i <  data.content_list.length; i++) {
-          data.content_list[i].menu = data.menu.list[i];
+          data.content_list[i].menu = data.menu.list[i-1];
+
+          data.content_list[i].post_date = util.computeTime(data.content_list[i].post_date);
       }
       //console.log("data.content_list");
-      //console.log(data.content_list[1].menu);
+      console.log(data);
       that.setData({
         items: that.data.items.concat(data),
         hidden: true

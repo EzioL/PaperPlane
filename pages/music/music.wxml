@@ -5,7 +5,7 @@
   <view class="content-list-wrapper" style="font-size: 1.09867em;">
     <view class="content-list">
       <view class="item-text" wx:for="{{items}}">
-        <view data-item="{{item}}" bindtap="onItemClick">
+        <view data-item="{{item}}"  data-item-id="{{item.item_id}}" bindtap="onMusicItemClick">
           <view class="text-tag">
             <text>{{item.tag}}</text>
           </view>
